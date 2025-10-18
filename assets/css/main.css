@@ -294,12 +294,19 @@ h6 {
     padding: 0;
   }
 
+  .header .navmenu {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+  }
+
   .navmenu ul {
     margin: 0;
     padding: 0;
     display: flex;
     list-style: none;
     align-items: center;
+    justify-content: center;
   }
 
   .navmenu li {
