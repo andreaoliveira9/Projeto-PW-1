@@ -1,21 +1,248 @@
 body {
-  background: #f7f7ff;
-  margin-top: 20px;
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--default-color);
 }
+
+.account-section {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+@media (max-width: 991.98px) {
+  .account-section {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .account-section {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+}
+
+.account-hero-badge {
+  display: inline-block;
+  padding: 0.45rem 1.6rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent-color) 18%, white 82%);
+  color: var(--accent-color);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.account-nav {
+  justify-content: center;
+}
+
+.account-nav .nav-link {
+  border-radius: 999px;
+  padding: 0.75rem 1.75rem;
+  border: 1px solid color-mix(in srgb, var(--accent-color) 28%, transparent 72%);
+  background-color: color-mix(in srgb, var(--accent-color) 6%, white 94%);
+  color: var(--nav-color);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  transition: all 0.3s ease;
+}
+
+.account-nav .nav-link:hover {
+  color: var(--accent-color);
+  border-color: color-mix(in srgb, var(--accent-color) 40%, transparent 60%);
+}
+
+.account-nav .nav-link.active {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--contrast-color);
+  box-shadow: 0 15px 35px rgba(52, 183, 167, 0.35);
+}
+
 .card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 0 solid transparent;
-  border-radius: 0.25rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%),
-    0 2px 6px 0 rgb(206 206 238 / 54%);
+  border: none;
+  border-radius: 1.25rem;
+  background-color: var(--surface-color);
+  box-shadow: 0 25px 45px rgba(10, 58, 52, 0.08);
 }
-.me-2 {
-  margin-right: 0.5rem !important;
+
+.card-body {
+  padding: 2.25rem;
+}
+
+.card-header,
+.card-footer {
+  padding: 1.5rem 2.25rem;
+}
+
+@media (max-width: 767.98px) {
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .card-header,
+  .card-footer {
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+.card-header,
+.card-footer {
+  border: none;
+  background-color: transparent;
+}
+
+.card-header.bg-light {
+  background: color-mix(in srgb, var(--accent-color) 12%, white 88%) !important;
+  color: var(--heading-color);
+}
+
+.card-header h5 {
+  font-weight: 700;
+}
+
+.list-group-item {
+  background-color: transparent;
+  border: none;
+  padding: 1rem 0;
+}
+
+.list-group-item + .list-group-item {
+  border-top: 1px solid color-mix(in srgb, var(--accent-color) 16%, transparent 84%);
+}
+
+.list-group-item.d-flex {
+  gap: 1rem;
+}
+
+.list-group-item h6 {
+  color: var(--accent-color);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.badge.text-bg-primary {
+  background-color: var(--accent-color) !important;
+}
+
+.badge.text-bg-secondary {
+  background-color: color-mix(in srgb, var(--accent-color) 12%, black 88%) !important;
+  color: var(--contrast-color);
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.btn-primary:hover {
+  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+  border-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+}
+
+.btn-outline-primary {
+  color: var(--accent-color);
+  border-color: color-mix(in srgb, var(--accent-color) 45%, transparent 55%);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  border-color: var(--accent-color);
+}
+
+.btn-outline-secondary {
+  color: var(--heading-color);
+  border-color: color-mix(in srgb, var(--accent-color) 25%, transparent 75%);
+}
+
+.btn-outline-secondary:hover {
+  background-color: color-mix(in srgb, var(--accent-color) 12%, white 88%);
+  color: var(--heading-color);
+  border-color: var(--accent-color);
+}
+
+.alert-info {
+  background-color: color-mix(in srgb, var(--accent-color) 12%, white 88%);
+  border: 1px solid color-mix(in srgb, var(--accent-color) 35%, transparent 65%);
+  color: var(--heading-color);
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--accent-color);
+  background-color: color-mix(in srgb, var(--accent-color) 14%, white 86%);
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  border-color: color-mix(in srgb, var(--accent-color) 30%, transparent 70%);
+  box-shadow: 0 0 0 0.25rem rgba(52, 183, 167, 0.2);
+}
+
+.table-primary {
+  --bs-table-bg: color-mix(in srgb, var(--accent-color) 14%, white 86%);
+  --bs-table-color: var(--heading-color);
+  --bs-table-border-color: color-mix(in srgb, var(--accent-color) 25%, white 75%);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: color-mix(in srgb, var(--surface-color) 90%, var(--accent-color) 6%);
+  color: inherit;
+}
+
+.badge.rounded-pill {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.badge.text-bg-warning {
+  background-color: color-mix(in srgb, #f4c542 85%, white 15%) !important;
+  color: #4b3600;
+}
+
+.badge.text-bg-success {
+  background-color: color-mix(in srgb, var(--accent-color) 40%, white 60%) !important;
+  color: var(--heading-color);
+}
+
+.badge.text-bg-primary.badge {
+  color: var(--contrast-color);
+}
+
+.list-group-item small {
+  color: color-mix(in srgb, var(--heading-color) 70%, white 30%);
+}
+
+.list-group-item span.text-secondary {
+  color: var(--heading-color) !important;
+  font-weight: 500;
+}
+
+.list-group-item .badge {
+  padding: 0.5rem 1rem;
+}
+
+.table-responsive {
+  border-radius: 1.25rem;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--accent-color) 18%, transparent 82%);
+}
+
+.plan-table thead.plan-table-head {
+  background: color-mix(in srgb, var(--accent-color) 22%, white 78%);
+}
+
+.plan-table thead.plan-table-head th {
+  color: var(--heading-color);
+  border-bottom: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.plan-table tbody td,
+.plan-table tbody th {
+  border-bottom-color: color-mix(in srgb, var(--accent-color) 15%, transparent 85%);
 }
