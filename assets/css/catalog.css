@@ -1,4 +1,4 @@
-/* Catalogo page specific styles */
+/* Catalog page specific styles */
 
 .catalog-accordion .accordion-item {
   border: 1px solid color-mix(in srgb, var(--accent-color) 25%, transparent 75%);
@@ -53,7 +53,8 @@
 
 .catalog-table table tbody tr + tr td,
 .catalog-table table tbody tr + tr th {
-  border-top: 1px solid color-mix(in srgb, var(--accent-color) 15%, transparent 85%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--accent-color) 15%, transparent 85%);
 }
 
 .catalog-table table td,
