@@ -39,12 +39,25 @@
 
 .resource-viewer-pane .tab-pane {
   display: none;
+  flex: 1 1 auto;
+  opacity: 0;
 }
 
-.resource-viewer-pane .tab-pane.active,
 .resource-viewer-pane .tab-pane.show {
-  flex: 1 1 auto;
   display: flex;
+  animation: resource-tab-fade 0.22s ease;
+  opacity: 1;
+}
+
+@keyframes resource-tab-fade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .resource-viewer iframe {
