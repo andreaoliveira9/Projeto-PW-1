@@ -1379,7 +1379,7 @@ section,
   }
 }
 
-.hero img {
+.hero .hero-bg {
   position: absolute;
   inset: 0;
   display: block;
@@ -1387,6 +1387,54 @@ section,
   height: 100%;
   object-fit: cover;
   z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.hero .hero-bg--light {
+  opacity: 1;
+}
+
+:root:has(#theme-light:checked) .hero .hero-bg--dark,
+:root[data-theme="light"] .hero .hero-bg--dark {
+  opacity: 0;
+}
+
+:root:has(#theme-light:checked) .hero .hero-bg--light,
+:root[data-theme="light"] .hero .hero-bg--light {
+  opacity: 1;
+}
+
+:root:has(#theme-auto:checked) .hero .hero-bg--dark,
+:root[data-theme="auto"] .hero .hero-bg--dark {
+  opacity: 0;
+}
+
+:root:has(#theme-auto:checked) .hero .hero-bg--light,
+:root[data-theme="auto"] .hero .hero-bg--light {
+  opacity: 1;
+}
+
+:root:has(#theme-dark:checked) .hero .hero-bg--light,
+:root[data-theme="dark"] .hero .hero-bg--light {
+  opacity: 0;
+}
+
+:root:has(#theme-dark:checked) .hero .hero-bg--dark,
+:root[data-theme="dark"] .hero .hero-bg--dark {
+  opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:has(#theme-auto:checked) .hero .hero-bg--light,
+  :root[data-theme="auto"] .hero .hero-bg--light {
+    opacity: 0;
+  }
+
+  :root:has(#theme-auto:checked) .hero .hero-bg--dark,
+  :root[data-theme="auto"] .hero .hero-bg--dark {
+    opacity: 1;
+  }
 }
 
 .hero .container {
