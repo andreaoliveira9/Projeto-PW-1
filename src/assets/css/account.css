@@ -367,8 +367,10 @@ body {
 
 .table-responsive {
   border-radius: 1.25rem;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   border: 1px solid color-mix(in srgb, var(--accent-color) 18%, transparent 82%);
+  -webkit-overflow-scrolling: touch;
 }
 
 .plan-table thead.plan-table-head {
@@ -377,6 +379,12 @@ body {
     var(--accent-color) 20%,
     var(--surface-color) 80%
   );
+}
+
+@media (max-width: 767.98px) {
+  .plan-table {
+    min-width: 600px;
+  }
 }
 
 :root:has(#theme-dark:checked) .plan-table thead.plan-table-head,

@@ -570,7 +570,7 @@ textarea::placeholder {
 
 .theme-toggle .dropdown-item:hover i,
 .theme-toggle .dropdown-item:focus i {
-  color: var(--contrast-color);
+  color: var(--accent-color);
 }
 
 .theme-toggle .dropdown-item .theme-check {
@@ -595,6 +595,22 @@ textarea::placeholder {
     var(--surface-color) 92%
   );
   font-weight: 600;
+}
+
+:root:has(#theme-dark:checked) .theme-toggle .dropdown-item:hover i,
+:root[data-theme="dark"] .theme-toggle .dropdown-item:hover i,
+:root:has(#theme-dark:checked) .theme-toggle .dropdown-item:focus i,
+:root[data-theme="dark"] .theme-toggle .dropdown-item:focus i {
+  color: var(--contrast-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:has(#theme-auto:checked) .theme-toggle .dropdown-item:hover i,
+  :root[data-theme="auto"] .theme-toggle .dropdown-item:hover i,
+  :root:has(#theme-auto:checked) .theme-toggle .dropdown-item:focus i,
+  :root[data-theme="auto"] .theme-toggle .dropdown-item:focus i {
+    color: var(--contrast-color);
+  }
 }
 /*--------------------------------------------------------------
 # Global Header

@@ -87,6 +87,17 @@
   );
 }
 
+.catalog-table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 767.98px) {
+  .catalog-table table {
+    min-width: 600px;
+  }
+}
+
 .badge.text-bg-primary,
 .badge.text-bg-success,
 .badge.text-bg-warning {
