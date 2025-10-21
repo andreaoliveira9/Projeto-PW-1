@@ -9,9 +9,40 @@ body {
   padding-bottom: 80px;
 }
 
+@media (max-width: 1199.98px) {
+  .account-section--intro {
+    padding-bottom: 40px;
+  }
+}
+
+.account-section--intro {
+  padding-bottom: 48px;
+}
+
+.account-section--summary {
+  padding-top: 72px;
+  padding-bottom: 72px;
+  background-color: color-mix(
+    in srgb,
+    var(--surface-color) 15%,
+    var(--background-color) 85%
+  );
+}
+
+.account-section--planner {
+  padding-top: 72px;
+  padding-bottom: 96px;
+}
+
 @media (max-width: 991.98px) {
   .account-section {
     padding-top: 100px;
+  }
+
+  .account-section--summary,
+  .account-section--planner {
+    padding-top: 56px;
+    padding-bottom: 64px;
   }
 }
 
@@ -19,6 +50,54 @@ body {
   .account-section {
     padding-top: 80px;
     padding-bottom: 60px;
+  }
+
+  .account-section--summary,
+  .account-section--planner {
+    padding-top: 48px;
+    padding-bottom: 56px;
+  }
+
+  .account-section--planner {
+    padding-bottom: 64px;
+  }
+}
+
+:root:has(#theme-dark:checked) .account-section--summary,
+:root[data-theme="dark"] .account-section--summary {
+  background-color: color-mix(
+    in srgb,
+    var(--surface-color) 20%,
+    var(--background-color) 80%
+  );
+}
+
+:root:has(#theme-dark:checked) .account-section--planner,
+:root[data-theme="dark"] .account-section--planner {
+  background-color: color-mix(
+    in srgb,
+    var(--background-color) 78%,
+    var(--accent-color) 22%
+  );
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:has(#theme-auto:checked) .account-section--summary,
+  :root[data-theme="auto"] .account-section--summary {
+    background-color: color-mix(
+      in srgb,
+      var(--surface-color) 20%,
+      var(--background-color) 80%
+    );
+  }
+
+  :root:has(#theme-auto:checked) .account-section--planner,
+  :root[data-theme="auto"] .account-section--planner {
+    background-color: color-mix(
+      in srgb,
+      var(--background-color) 78%,
+      var(--accent-color) 22%
+    );
   }
 }
 
@@ -105,11 +184,10 @@ body {
 
 .card-header.bg-light {
   background: color-mix(
-      in srgb,
-      var(--accent-color) 12%,
-      var(--surface-color) 88%
-    )
-    !important;
+    in srgb,
+    var(--accent-color) 12%,
+    var(--surface-color) 88%
+  ) !important;
   color: var(--heading-color);
 }
 
@@ -124,7 +202,8 @@ body {
 }
 
 .list-group-item + .list-group-item {
-  border-top: 1px solid color-mix(in srgb, var(--accent-color) 16%, transparent 84%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--accent-color) 16%, transparent 84%);
 }
 
 .list-group-item.d-flex {
@@ -142,7 +221,11 @@ body {
 }
 
 .badge.text-bg-secondary {
-  background-color: color-mix(in srgb, var(--accent-color) 12%, black 88%) !important;
+  background-color: color-mix(
+    in srgb,
+    var(--accent-color) 12%,
+    black 88%
+  ) !important;
   color: var(--contrast-color);
 }
 
@@ -230,7 +313,11 @@ body {
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) > * {
-  background-color: color-mix(in srgb, var(--surface-color) 90%, var(--accent-color) 6%);
+  background-color: color-mix(
+    in srgb,
+    var(--surface-color) 90%,
+    var(--accent-color) 6%
+  );
   color: inherit;
 }
 
@@ -241,21 +328,19 @@ body {
 
 .badge.text-bg-warning {
   background-color: color-mix(
-      in srgb,
-      #f4c542 85%,
-      var(--contrast-color) 15%
-    )
-    !important;
+    in srgb,
+    #f4c542 85%,
+    var(--contrast-color) 15%
+  ) !important;
   color: #4b3600;
 }
 
 .badge.text-bg-success {
   background-color: color-mix(
-      in srgb,
-      var(--accent-color) 40%,
-      var(--surface-color) 60%
-    )
-    !important;
+    in srgb,
+    var(--accent-color) 40%,
+    var(--surface-color) 60%
+  ) !important;
   color: var(--heading-color);
 }
 
@@ -323,7 +408,11 @@ body {
 
 .plan-table tbody td,
 .plan-table tbody th {
-  border-bottom-color: color-mix(in srgb, var(--accent-color) 15%, transparent 85%);
+  border-bottom-color: color-mix(
+    in srgb,
+    var(--accent-color) 15%,
+    transparent 85%
+  );
 }
 
 .plan-table tbody tr:nth-of-type(even) {
