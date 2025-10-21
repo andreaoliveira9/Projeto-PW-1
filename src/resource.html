@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="auto">
   <head>
     <meta charset="utf-8" />
     <meta
@@ -12,6 +12,24 @@
     <!-- Favicon-->
     <link rel="icon" type="image/png" href="assets/img/favicon.png" />
     <!-- Core theme CSS (includes Bootstrap)-->
+
+    <script>
+      (function () {
+        var storageKey = "mathpath-theme";
+        var allowed = ["auto", "light", "dark"];
+        try {
+          var storedTheme = localStorage.getItem(storageKey);
+          if (allowed.indexOf(storedTheme) !== -1) {
+            document.documentElement.setAttribute("data-theme", storedTheme);
+          }
+        } catch (error) {
+          document.documentElement.setAttribute(
+            "data-theme",
+            document.documentElement.getAttribute("data-theme") || "auto"
+          );
+        }
+      })();
+    </script>
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
@@ -43,6 +61,54 @@
               <a class="nav-link active" aria-current="page" href="#">Blog</a>
             </li>
           </ul>
+          <div class="theme-toggle dropdown ms-lg-3 mt-3 mt-lg-0">
+            <input
+              type="radio"
+              class="theme-radio"
+              name="site-theme"
+              id="theme-auto"
+              checked
+            />
+            <input
+              type="radio"
+              class="theme-radio"
+              name="site-theme"
+              id="theme-light"
+            />
+            <input
+              type="radio"
+              class="theme-radio"
+              name="site-theme"
+              id="theme-dark"
+            />
+            <button
+              class="btn btn-outline-light rounded-pill d-flex align-items-center gap-2 w-100"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              aria-label="Alterar tema"
+            >
+              <i class="bi bi-circle-half fs-5"></i>
+              <span class="flex-grow-1 text-start">Tema</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end shadow">
+              <label class="dropdown-item" for="theme-auto">
+                <i class="bi bi-laptop"></i>
+                <span>Sistema</span>
+                <i class="bi bi-check2 theme-check" aria-hidden="true"></i>
+              </label>
+              <label class="dropdown-item" for="theme-light">
+                <i class="bi bi-sun"></i>
+                <span>Modo claro</span>
+                <i class="bi bi-check2 theme-check" aria-hidden="true"></i>
+              </label>
+              <label class="dropdown-item" for="theme-dark">
+                <i class="bi bi-moon-stars"></i>
+                <span>Modo escuro</span>
+                <i class="bi bi-check2 theme-check" aria-hidden="true"></i>
+              </label>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
@@ -251,6 +317,7 @@
         </p>
       </div>
     </footer>
+    <script src="assets/js/theme.js"></script>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>

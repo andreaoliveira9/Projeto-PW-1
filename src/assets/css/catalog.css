@@ -5,7 +5,7 @@
   border-radius: 1.25rem;
   overflow: hidden;
   background: var(--surface-color);
-  box-shadow: 0 20px 40px rgba(10, 58, 52, 0.08);
+  box-shadow: 0 22px 48px rgba(12, 22, 40, 0.18);
   margin-bottom: 1.5rem;
 }
 
@@ -23,7 +23,11 @@
 }
 
 .catalog-accordion .accordion-button.collapsed {
-  background: color-mix(in srgb, var(--accent-color) 12%, white 88%);
+  background: color-mix(
+    in srgb,
+    var(--accent-color) 12%,
+    var(--surface-color) 88%
+  );
   color: var(--heading-color);
 }
 
@@ -33,6 +37,11 @@
 
 .catalog-accordion .accordion-body {
   padding: 1.8rem;
+  color: color-mix(
+    in srgb,
+    var(--default-color) 88%,
+    var(--contrast-color) 12%
+  );
 }
 
 .catalog-table table {
@@ -41,7 +50,11 @@
 }
 
 .catalog-table table thead {
-  background: color-mix(in srgb, var(--accent-color) 18%, white 82%);
+  background: color-mix(
+    in srgb,
+    var(--accent-color) 18%,
+    var(--surface-color) 82%
+  );
 }
 
 .catalog-table table thead th {
@@ -67,7 +80,11 @@
 }
 
 .catalog-table table a:hover {
-  color: color-mix(in srgb, var(--accent-color) 80%, white 20%);
+  color: color-mix(
+    in srgb,
+    var(--accent-color) 85%,
+    var(--contrast-color) 15%
+  );
 }
 
 .badge.text-bg-primary,
