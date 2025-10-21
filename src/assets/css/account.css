@@ -76,8 +76,8 @@ body {
 :root[data-theme="dark"] .account-section--planner {
   background-color: color-mix(
     in srgb,
-    var(--background-color) 78%,
-    var(--accent-color) 22%
+    var(--surface-color) 20%,
+    var(--background-color) 80%
   );
 }
 
