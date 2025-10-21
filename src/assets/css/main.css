@@ -287,7 +287,23 @@ h6 {
 
 input::placeholder,
 textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color) 60%, transparent 40%);
+  color: color-mix(in srgb, var(--default-color) 50%, transparent 50%);
+}
+
+:root:has(#theme-dark:checked) input::placeholder,
+:root:has(#theme-dark:checked) textarea::placeholder,
+:root[data-theme="dark"] input::placeholder,
+:root[data-theme="dark"] textarea::placeholder {
+  color: color-mix(in srgb, var(--default-color) 50%, transparent 50%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:has(#theme-auto:checked) input::placeholder,
+  :root:has(#theme-auto:checked) textarea::placeholder,
+  :root[data-theme="auto"] input::placeholder,
+  :root[data-theme="auto"] textarea::placeholder {
+    color: color-mix(in srgb, var(--default-color) 50%, transparent 50%);
+  }
 }
 
 :root:has(#theme-dark:checked) .text-muted,
@@ -313,6 +329,33 @@ textarea::placeholder {
 :root:has(#theme-dark:checked) hr,
 :root[data-theme="dark"] hr {
   border-color: color-mix(in srgb, var(--default-color) 15%, transparent 85%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:has(#theme-auto:checked) .text-muted,
+  :root[data-theme="auto"] .text-muted {
+    color: color-mix(
+      in srgb,
+      var(--default-color) 75%,
+      var(--contrast-color) 25%
+    ) !important;
+  }
+
+  :root:has(#theme-auto:checked) .text-secondary,
+  :root[data-theme="auto"] .text-secondary,
+  :root:has(#theme-auto:checked) .text-body-secondary,
+  :root[data-theme="auto"] .text-body-secondary {
+    color: color-mix(
+      in srgb,
+      var(--default-color) 82%,
+      var(--contrast-color) 18%
+    ) !important;
+  }
+
+  :root:has(#theme-auto:checked) hr,
+  :root[data-theme="auto"] hr {
+    border-color: color-mix(in srgb, var(--default-color) 15%, transparent 85%);
+  }
 }
 
 .table th,
@@ -442,7 +485,6 @@ textarea::placeholder {
   overflow: hidden;
 }
 
-
 .theme-toggle.dropdown > button,
 .user-menu .btn {
   border-color: color-mix(in srgb, var(--accent-color) 20%, transparent 80%);
@@ -461,6 +503,26 @@ textarea::placeholder {
   align-items: center;
   justify-content: center;
   gap: 0 !important;
+}
+
+:root:has(#theme-light:checked) .theme-toggle.dropdown > button,
+:root[data-theme="light"] .theme-toggle.dropdown > button,
+:root:has(#theme-light:checked) .user-menu .btn,
+:root[data-theme="light"] .user-menu .btn,
+:root:has(#theme-auto:checked) .theme-toggle.dropdown > button,
+:root[data-theme="auto"] .theme-toggle.dropdown > button,
+:root:has(#theme-auto:checked) .user-menu .btn,
+:root[data-theme="auto"] .user-menu .btn {
+  color: var(--nav-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:has(#theme-auto:checked) .theme-toggle.dropdown > button,
+  :root[data-theme="auto"] .theme-toggle.dropdown > button,
+  :root:has(#theme-auto:checked) .user-menu .btn,
+  :root[data-theme="auto"] .user-menu .btn {
+    color: var(--contrast-color);
+  }
 }
 
 .theme-toggle__icon,
@@ -604,12 +666,12 @@ textarea::placeholder {
 }
 
 .header .user-menu .btn i {
-  color: var(--accent-color);
+  color: currentColor;
   transition: color 0.3s ease;
 }
 
 .header .user-menu .btn:hover i {
-  color: var(--contrast-color);
+  color: currentColor;
 }
 
 .header .user-menu .dropdown-menu {
