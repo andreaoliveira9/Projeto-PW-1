@@ -32,7 +32,7 @@ jobs:
         run: |
           mkdir -p _site
           cp -R ./src/assets ./_site/
-          for page in index.html catalog.html contact.html account.html resource.html; do
+          for page in index.html catalog.html contact.html account.html resource.html calculator.html; do
             cp "./src/${page}" ./_site/
           done
 
