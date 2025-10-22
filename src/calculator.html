@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>MathPath - Contactos</title>
+    <title>MathPath - Calculadora GeoGebra</title>
     <meta
       name="description"
-      content="Fala com a equipa MathPath para apoio a recursos de Matemática, sugestões ou questões sobre a plataforma."
+      content="Acede à calculadora GeoGebra integrada para criar gráficos, geometria e resolver problemas matemáticos."
     />
     <meta
       name="keywords"
-      content="contacto MathPath, apoio ao estudo, recursos matematica"
+      content="geogebra, calculadora, gráficos, geometria, matemática, ferramenta"
     />
 
     <!-- Favicons -->
@@ -56,17 +56,11 @@
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
-
-    <!-- =======================================================
-  * Template Name: Kelly
-  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <!-- Calculator CSS File -->
+    <link href="assets/css/calculator.css" rel="stylesheet" />
   </head>
 
-  <body class="contact-page">
+  <body class="calculator-page">
     <header
       id="header"
       class="header d-flex align-items-center light-background sticky-top"
@@ -78,7 +72,6 @@
           href="index.html"
           class="logo d-flex align-items-center me-auto me-xl-0"
         >
-          <!-- <img src="assets/img/logo.png" alt=""> -->
           <h1 class="sitename">MathPath</h1>
         </a>
 
@@ -96,8 +89,8 @@
                 <li><a href="catalog.html#recursos-12">12.º Ano</a></li>
               </ul>
             </li>
-            <li><a href="calculator.html">Calculadora</a></li>
-            <li><a href="contact.html" class="active">Contactos</a></li>
+            <li><a href="calculator.html" class="active">Calculadora</a></li>
+            <li><a href="contact.html">Contactos</a></li>
             <li class="dropdown mobile-profile d-lg-none">
               <a href="account.html">
                 <span class="mobile-profile-info">
@@ -218,134 +211,102 @@
     </header>
 
     <main class="main">
-      <!-- Contact Section -->
-      <section id="contact" class="contact section">
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Contactos</h2>
-          <p>
-            Estamos disponíveis para esclarecer dúvidas, receber sugestões e
-            apoiar a utilização dos recursos MathPath.
-          </p>
-        </div>
+      <!-- Calculator Section -->
+      <section class="section py-4">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title text-center mb-4">
+            <h2>Calculadora Gráfica GeoGebra</h2>
+            <p class="text-muted">
+              Ferramenta matemática interativa para criar gráficos, geometria,
+              álgebra e muito mais.
+            </p>
+          </div>
 
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4">
-            <div class="col-lg-5">
-              <div class="info-wrap">
-                <div
-                  class="info-item d-flex"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                >
-                  <i class="bi bi-geo-alt flex-shrink-0"></i>
-                  <div>
-                    <h3>Gabinete MathPath</h3>
-                    <p>
-                      Instituto Superior de Contabilidade e Administração da
-                      Universidade de Aveiro, 3810-193 Aveiro
-                    </p>
-                  </div>
-                </div>
+          <div class="alert alert-info mb-4" role="alert">
+            <i class="bi bi-info-circle me-2"></i>
+            Usa a calculadora GeoGebra abaixo para explorar funções, criar
+            construções geométricas e resolver problemas matemáticos de forma
+            interativa.
+          </div>
 
-                <div
-                  class="info-item d-flex"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                >
-                  <i class="bi bi-telephone flex-shrink-0"></i>
-                  <div>
-                    <h3>Linha de apoio</h3>
-                    <p>+351 211 234 567 (dias úteis, 9h00 - 18h00)</p>
-                  </div>
-                </div>
-
-                <div
-                  class="info-item d-flex"
-                  data-aos="fade-up"
-                  data-aos-delay="400"
-                >
-                  <i class="bi bi-envelope flex-shrink-0"></i>
-                  <div>
-                    <h3>Email</h3>
-                    <p>apoio@mathpath.pt</p>
-                  </div>
-                </div>
+          <div class="card shadow-sm">
+            <div class="card-body p-0">
+              <div class="calculator-container">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2755.9304766569476!2d-8.655801124483459!3d40.63043074260592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd23a2a941af862f%3A0x21b34866d4655047!2sISCA-UA%20-%20Instituto%20Superior%20de%20Contabilidade%20e%20Administra%C3%A7%C3%A3o%20da%20Universidade%20de%20Aveiro%2C%203810-193%20Aveiro!5e1!3m2!1spt-PT!2spt!4v1761143950681!5m2!1spt-PT!2spt"
-                  frameborder="0"
-                  style="border: 0; width: 100%; height: 270px"
-                  allowfullscreen=""
+                  src="https://www.geogebra.org/classic?lang=pt"
+                  class="calculator-iframe"
+                  title="Calculadora GeoGebra"
                   loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
+                  allowfullscreen
                 ></iframe>
               </div>
             </div>
+          </div>
 
-            <div class="col-lg-7">
-              <form
-                action="#"
-                method="post"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <div class="row gy-4">
+          <div class="mt-4">
+            <div class="card bg-light">
+              <div class="card-body">
+                <h4 class="h6 mb-3">
+                  <i class="bi bi-lightbulb me-2"></i>Dicas de Utilização
+                </h4>
+                <div class="row">
                   <div class="col-md-6">
-                    <label for="name-field" class="pb-2">Nome</label>
-                    <input
-                      type="text"
-                      name="name"
-                      id="name-field"
-                      class="form-control"
-                      required=""
-                    />
+                    <ul class="mb-3">
+                      <li>
+                        <strong>Álgebra:</strong> escreve funções como "f(x) =
+                        x^2 + 3"
+                      </li>
+                      <li>
+                        <strong>Geometria:</strong> usa as ferramentas para
+                        criar pontos, retas e polígonos
+                      </li>
+                      <li>
+                        <strong>Interseções:</strong> clica em "Interseção" para
+                        encontrar pontos de cruzamento
+                      </li>
+                      <li>
+                        <strong>Equações:</strong> escreve "Resolver[x^2 - 4 =
+                        0]"
+                      </li>
+                    </ul>
                   </div>
-
                   <div class="col-md-6">
-                    <label for="email-field" class="pb-2">Email</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      id="email-field"
-                      required=""
-                    />
-                  </div>
-
-                  <div class="col-md-12">
-                    <label for="subject-field" class="pb-2">Assunto</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="subject"
-                      id="subject-field"
-                      required=""
-                    />
-                  </div>
-
-                  <div class="col-md-12">
-                    <label for="message-field" class="pb-2">Mensagem</label>
-                    <textarea
-                      class="form-control"
-                      name="message"
-                      rows="10"
-                      id="message-field"
-                      placeholder="Explica-nos como podemos ajudar-te."
-                      required=""
-                    ></textarea>
-                  </div>
-
-                  <div class="col-md-12 text-center">
-                    <button type="submit" class="btn btn-accent px-4">
-                      Enviar mensagem
-                    </button>
+                    <ul class="mb-0">
+                      <li>
+                        <strong>Derivadas:</strong> escreve "Derivada[x^3]"
+                      </li>
+                      <li>
+                        <strong>Integrais:</strong> escreve "Integral[sin(x)]"
+                      </li>
+                      <li>
+                        <strong>Vetores:</strong> usa "(2, 3)" para criar
+                        vetores
+                      </li>
+                      <li>
+                        <strong>Ângulos:</strong> usa a ferramenta "Ângulo"
+                        entre objetos
+                      </li>
+                    </ul>
                   </div>
                 </div>
-              </form>
+              </div>
             </div>
+          </div>
+
+          <div class="mt-4 text-center">
+            <p class="text-muted small mb-0">
+              <i class="bi bi-box-arrow-up-right me-1"></i>
+              <a
+                href="https://www.geogebra.org/classic?lang=pt"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Abrir GeoGebra em ecrã completo
+              </a>
+            </p>
           </div>
         </div>
       </section>
-      <!-- /Contact Section -->
     </main>
 
     <footer id="footer" class="footer light-background">
@@ -358,16 +319,20 @@
           </p>
         </div>
         <div class="social-links d-flex justify-content-center">
-          <a href=""><i class="bi bi-twitter-x"></i></a>
-          <a href=""><i class="bi bi-facebook"></i></a>
-          <a href=""><i class="bi bi-instagram"></i></a>
-          <a href=""><i class="bi bi-linkedin"></i></a>
+          <a href="#" aria-label="MathPath no X"
+            ><i class="bi bi-twitter-x"></i
+          ></a>
+          <a href="#" aria-label="MathPath no Facebook"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a href="#" aria-label="MathPath no Instagram"
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <a href="#" aria-label="MathPath no LinkedIn"
+            ><i class="bi bi-linkedin"></i
+          ></a>
         </div>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
           Desenvolvido por
           <a href="https://bootstrapmade.com/">BootstrapMade</a> Distribuído por
           <a href="https://themewagon.com">ThemeWagon</a>

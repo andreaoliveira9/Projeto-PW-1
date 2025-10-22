@@ -1,0 +1,11 @@
+.calculator-container {
+  height: calc(100vh - 200px);
+  min-height: 600px;
+}
+
+.calculator-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
