@@ -1,5 +1,6 @@
-/* Catalog page specific styles */
+/* Catalog Page Specific Styles */
 
+/* Catalog Accordion */
 .catalog-accordion .accordion-item {
   border: 1px solid color-mix(in srgb, var(--accent-color) 25%, transparent 75%);
   border-radius: 1.25rem;
@@ -42,6 +43,12 @@
     var(--default-color) 88%,
     var(--contrast-color) 12%
   );
+}
+
+/* Catalog Table */
+.catalog-table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .catalog-table table {
@@ -87,32 +94,7 @@
   );
 }
 
-.catalog-table {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-@media (max-width: 767.98px) {
-  .catalog-table table {
-    min-width: 600px;
-  }
-}
-
-.badge.text-bg-primary,
-.badge.text-bg-success,
-.badge.text-bg-warning {
-  padding: 0.6rem 1.4rem;
-  border-radius: 999px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.hero-wrapper {
-  position: relative;
-}
-
+/* Catalog Hero */
 .catalog-hero {
   padding-top: 140px;
   padding-bottom: 120px;
@@ -166,6 +148,7 @@
   color: var(--contrast-color);
 }
 
+/* Responsive Design */
 @media (max-width: 1199px) {
   .catalog-page .navmenu ul {
     inset: 80px 20px auto 20px;
@@ -177,3 +160,10 @@
     align-items: flex-start;
   }
 }
+
+@media (max-width: 767.98px) {
+  .catalog-table table {
+    min-width: 600px;
+  }
+}
+

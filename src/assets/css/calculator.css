@@ -1,3 +1,5 @@
+/* Calculator Page Specific Styles */
+
 .calculator-container {
   height: calc(100vh - 200px);
   min-height: 600px;
@@ -8,4 +10,12 @@
   height: 100%;
   border: none;
   border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 767.98px) {
+  .calculator-container {
+    height: calc(100vh - 150px);
+    min-height: 500px;
+  }
 }

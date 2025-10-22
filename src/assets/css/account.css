@@ -1,18 +1,9 @@
-body {
-  margin: 0;
-  background-color: var(--background-color);
-  color: var(--default-color);
-}
+/* Account Page Specific Styles */
 
+/* Account Sections */
 .account-section {
   padding-top: 120px;
   padding-bottom: 80px;
-}
-
-@media (max-width: 1199.98px) {
-  .account-section--intro {
-    padding-bottom: 40px;
-  }
 }
 
 .account-section--intro {
@@ -34,73 +25,7 @@ body {
   padding-bottom: 96px;
 }
 
-@media (max-width: 991.98px) {
-  .account-section {
-    padding-top: 100px;
-  }
-
-  .account-section--summary,
-  .account-section--planner {
-    padding-top: 56px;
-    padding-bottom: 64px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .account-section {
-    padding-top: 80px;
-    padding-bottom: 60px;
-  }
-
-  .account-section--summary,
-  .account-section--planner {
-    padding-top: 48px;
-    padding-bottom: 56px;
-  }
-
-  .account-section--planner {
-    padding-bottom: 64px;
-  }
-}
-
-:root:has(#theme-dark:checked) .account-section--summary,
-:root[data-theme="dark"] .account-section--summary {
-  background-color: color-mix(
-    in srgb,
-    var(--surface-color) 20%,
-    var(--background-color) 80%
-  );
-}
-
-:root:has(#theme-dark:checked) .account-section--planner,
-:root[data-theme="dark"] .account-section--planner {
-  background-color: color-mix(
-    in srgb,
-    var(--surface-color) 20%,
-    var(--background-color) 80%
-  );
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:has(#theme-auto:checked) .account-section--summary,
-  :root[data-theme="auto"] .account-section--summary {
-    background-color: color-mix(
-      in srgb,
-      var(--surface-color) 20%,
-      var(--background-color) 80%
-    );
-  }
-
-  :root:has(#theme-auto:checked) .account-section--planner,
-  :root[data-theme="auto"] .account-section--planner {
-    background-color: color-mix(
-      in srgb,
-      var(--surface-color) 20%,
-      var(--background-color) 80%
-    );
-  }
-}
-
+/* Account Badge */
 .account-hero-badge {
   display: inline-block;
   padding: 0.45rem 1.6rem;
@@ -117,6 +42,7 @@ body {
   font-weight: 600;
 }
 
+/* Account Navigation */
 .account-nav {
   justify-content: center;
 }
@@ -149,262 +75,13 @@ body {
   box-shadow: 0 15px 35px rgba(52, 183, 167, 0.35);
 }
 
-.card {
-  border: none;
-  border-radius: 1.25rem;
-  background-color: var(--surface-color);
-  box-shadow: 0 25px 45px rgba(10, 58, 52, 0.08);
-}
-
-.card-body {
-  padding: 2.25rem;
-}
-
-.card-header,
-.card-footer {
-  padding: 1.5rem 2.25rem;
-}
-
-@media (max-width: 767.98px) {
-  .card-body {
-    padding: 1.5rem;
-  }
-
-  .card-header,
-  .card-footer {
-    padding: 1.25rem 1.5rem;
-  }
-}
-
-.card-header,
-.card-footer {
-  border: none;
-  background-color: transparent;
-}
-
-.card-header.bg-light {
-  background: color-mix(
-    in srgb,
-    var(--accent-color) 12%,
-    var(--surface-color) 88%
-  ) !important;
-  color: var(--heading-color);
-}
-
-.card-header h5 {
-  font-weight: 700;
-}
-
-.list-group-item {
-  background-color: transparent;
-  border: none;
-  padding: 1rem 0;
-}
-
-.list-group-item + .list-group-item {
-  border-top: 1px solid
-    color-mix(in srgb, var(--accent-color) 16%, transparent 84%);
-}
-
-.list-group-item.d-flex {
-  gap: 1rem;
-}
-
-.list-group-item h6 {
-  color: var(--accent-color);
-  font-weight: 600;
-  letter-spacing: 0.04em;
-}
-
-.badge.text-bg-primary {
-  background-color: var(--accent-color) !important;
-}
-
-.badge.text-bg-secondary {
-  background-color: color-mix(
-    in srgb,
-    var(--accent-color) 12%,
-    black 88%
-  ) !important;
-  color: var(--contrast-color);
-}
-
-.btn-primary {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-}
-
-.btn-primary:hover {
-  background-color: color-mix(
-    in srgb,
-    var(--accent-color) 90%,
-    var(--contrast-color) 10%
-  );
-  border-color: color-mix(
-    in srgb,
-    var(--accent-color) 90%,
-    var(--contrast-color) 10%
-  );
-}
-
-.btn-outline-primary {
-  color: var(--accent-color);
-  border-color: color-mix(in srgb, var(--accent-color) 45%, transparent 55%);
-}
-
-.btn-outline-primary:hover {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-  border-color: var(--accent-color);
-}
-
-.btn-outline-secondary {
-  color: var(--heading-color);
-  border-color: color-mix(in srgb, var(--accent-color) 25%, transparent 75%);
-}
-
-.btn-outline-secondary:hover {
-  background-color: color-mix(
-    in srgb,
-    var(--accent-color) 12%,
-    var(--surface-color) 88%
-  );
-  color: var(--heading-color);
-  border-color: var(--accent-color);
-}
-
-.alert-info {
-  background-color: color-mix(
-    in srgb,
-    var(--accent-color) 12%,
-    var(--surface-color) 88%
-  );
-  border: 1px solid color-mix(in srgb, var(--accent-color) 35%, transparent 65%);
-  color: var(--heading-color);
-}
-
-.accordion-button:not(.collapsed) {
-  color: var(--accent-color);
-  background-color: color-mix(
-    in srgb,
-    var(--accent-color) 14%,
-    var(--surface-color) 86%
-  );
-  box-shadow: none;
-}
-
-.accordion-button:focus {
-  border-color: color-mix(in srgb, var(--accent-color) 30%, transparent 70%);
-  box-shadow: 0 0 0 0.25rem rgba(52, 183, 167, 0.2);
-}
-
-.table-primary {
-  --bs-table-bg: color-mix(
-    in srgb,
-    var(--accent-color) 14%,
-    var(--surface-color) 86%
-  );
-  --bs-table-color: var(--heading-color);
-  --bs-table-border-color: color-mix(
-    in srgb,
-    var(--accent-color) 25%,
-    var(--surface-color) 75%
-  );
-}
-
-.table-striped > tbody > tr:nth-of-type(odd) > * {
-  background-color: color-mix(
-    in srgb,
-    var(--surface-color) 90%,
-    var(--accent-color) 6%
-  );
-  color: inherit;
-}
-
-.badge.rounded-pill {
-  font-weight: 600;
-  letter-spacing: 0.04em;
-}
-
-.badge.text-bg-warning {
-  background-color: color-mix(
-    in srgb,
-    #f4c542 85%,
-    var(--contrast-color) 15%
-  ) !important;
-  color: #4b3600;
-}
-
-.badge.text-bg-success {
-  background-color: color-mix(
-    in srgb,
-    var(--accent-color) 40%,
-    var(--surface-color) 60%
-  ) !important;
-  color: var(--heading-color);
-}
-
-.badge.text-bg-primary.badge {
-  color: var(--contrast-color);
-}
-
-.list-group-item small {
-  color: color-mix(
-    in srgb,
-    var(--heading-color) 70%,
-    var(--contrast-color) 30%
-  );
-}
-
-.list-group-item span.text-secondary {
-  color: var(--heading-color) !important;
-  font-weight: 500;
-}
-
-.list-group-item .badge {
-  padding: 0.5rem 1rem;
-}
-
-.table-responsive {
-  border-radius: 1.25rem;
-  overflow-x: auto;
-  overflow-y: hidden;
-  border: 1px solid color-mix(in srgb, var(--accent-color) 18%, transparent 82%);
-  -webkit-overflow-scrolling: touch;
-}
-
+/* Plan Table */
 .plan-table thead.plan-table-head {
   background: color-mix(
     in srgb,
     var(--accent-color) 20%,
     var(--surface-color) 80%
   );
-}
-
-@media (max-width: 767.98px) {
-  .plan-table {
-    min-width: 600px;
-  }
-}
-
-:root:has(#theme-dark:checked) .plan-table thead.plan-table-head,
-:root[data-theme="dark"] .plan-table thead.plan-table-head {
-  background: color-mix(
-    in srgb,
-    var(--accent-color) 26%,
-    var(--surface-color) 74%
-  );
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:has(#theme-auto:checked) .plan-table thead.plan-table-head,
-  :root[data-theme="auto"] .plan-table thead.plan-table-head {
-    background: color-mix(
-      in srgb,
-      var(--accent-color) 26%,
-      var(--surface-color) 74%
-    );
-  }
 }
 
 .plan-table thead.plan-table-head th {
@@ -431,19 +108,10 @@ body {
   );
 }
 
-:root:has(#theme-dark:checked) .plan-table tbody tr:nth-of-type(even),
-:root[data-theme="dark"] .plan-table tbody tr:nth-of-type(even) {
-  background-color: color-mix(
-    in srgb,
-    var(--mathpath-table-base, var(--surface-color)) 88%,
-    var(--accent-color) 12%
-  );
-}
-
 .plan-table tbody tr:hover {
   background-color: color-mix(
     in srgb,
-    var(--mathpath-table-base, var(--surface-color)) 82%,
+    var(--surface-color) 82%,
     var(--accent-color) 18%
   );
   color: var(--heading-color);
@@ -453,3 +121,97 @@ body {
 .plan-table tbody tr:hover td {
   color: var(--heading-color);
 }
+
+/* Dark Mode Adjustments */
+:root:has(#theme-dark:checked) .account-section--summary,
+:root[data-theme="dark"] .account-section--summary,
+:root:has(#theme-dark:checked) .account-section--planner,
+:root[data-theme="dark"] .account-section--planner {
+  background-color: color-mix(
+    in srgb,
+    var(--surface-color) 20%,
+    var(--background-color) 80%
+  );
+}
+
+:root:has(#theme-dark:checked) .plan-table thead.plan-table-head,
+:root[data-theme="dark"] .plan-table thead.plan-table-head {
+  background: color-mix(
+    in srgb,
+    var(--accent-color) 26%,
+    var(--surface-color) 74%
+  );
+}
+
+:root:has(#theme-dark:checked) .plan-table tbody tr:nth-of-type(even),
+:root[data-theme="dark"] .plan-table tbody tr:nth-of-type(even) {
+  background-color: color-mix(
+    in srgb,
+    var(--surface-color) 88%,
+    var(--accent-color) 12%
+  );
+}
+
+/* Auto Theme Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root:has(#theme-auto:checked) .account-section--summary,
+  :root[data-theme="auto"] .account-section--summary,
+  :root:has(#theme-auto:checked) .account-section--planner,
+  :root[data-theme="auto"] .account-section--planner {
+    background-color: color-mix(
+      in srgb,
+      var(--surface-color) 20%,
+      var(--background-color) 80%
+    );
+  }
+
+  :root:has(#theme-auto:checked) .plan-table thead.plan-table-head,
+  :root[data-theme="auto"] .plan-table thead.plan-table-head {
+    background: color-mix(
+      in srgb,
+      var(--accent-color) 26%,
+      var(--surface-color) 74%
+    );
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1199.98px) {
+  .account-section--intro {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .account-section {
+    padding-top: 100px;
+  }
+
+  .account-section--summary,
+  .account-section--planner {
+    padding-top: 56px;
+    padding-bottom: 64px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .account-section {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+
+  .account-section--summary,
+  .account-section--planner {
+    padding-top: 48px;
+    padding-bottom: 56px;
+  }
+
+  .account-section--planner {
+    padding-bottom: 64px;
+  }
+
+  .plan-table {
+    min-width: 600px;
+  }
+}
+
