@@ -773,7 +773,7 @@ textarea::placeholder {
   border-color: var(--accent-color);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 991px) {
   .header .logo {
     order: 1;
   }
@@ -796,7 +796,7 @@ textarea::placeholder {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .navmenu {
     padding: 0;
   }
@@ -941,7 +941,7 @@ textarea::placeholder {
 }
 
 /* Mobile Navigation */
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;
@@ -1335,7 +1335,7 @@ section,
   overflow: clip;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   section,
   .section {
     scroll-margin-top: 66px;
@@ -1389,7 +1389,7 @@ section,
   justify-content: center;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 991px) {
   .hero {
     min-height: calc(100vh - 68px);
   }
