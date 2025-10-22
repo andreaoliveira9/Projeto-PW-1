@@ -134,6 +134,12 @@
   );
 }
 
+:root:has(#theme-dark:checked) .bg-light,
+:root[data-theme="dark"] .bg-light {
+  background-color: var(--surface-color) !important;
+  color: var(--default-color);
+}
+
 :root:has(#theme-dark:checked) .plan-table thead.plan-table-head,
 :root[data-theme="dark"] .plan-table thead.plan-table-head {
   background: color-mix(
@@ -163,6 +169,12 @@
       var(--surface-color) 20%,
       var(--background-color) 80%
     );
+  }
+
+  :root:has(#theme-auto:checked) .bg-light,
+  :root[data-theme="auto"] .bg-light {
+    background-color: var(--surface-color) !important;
+    color: var(--default-color);
   }
 
   :root:has(#theme-auto:checked) .plan-table thead.plan-table-head,

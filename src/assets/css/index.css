@@ -78,7 +78,6 @@
 .hero .container {
   position: relative;
   z-index: 3;
-  text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
 }
 
 .hero h2 {
@@ -86,12 +85,14 @@
   font-size: 48px;
   font-weight: 700;
   color: var(--contrast-color);
+  text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
 }
 
 .hero p {
-  color: color-mix(in srgb, var(--contrast-color) 80%, transparent 20%);
   margin: 10px 0 0 0;
   font-size: 24px;
+  color: var(--contrast-color);
+  text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
 }
 
 .hero .hero-cta {
@@ -141,6 +142,9 @@
 
 /* Intro Section */
 .intro-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
   overflow: hidden;
   background: var(--surface-color);
@@ -148,8 +152,10 @@
 }
 
 .intro-figure__image {
+  width: min(420px, 100%);
+  display: block;
+  margin: 0 auto;
   object-fit: cover;
-  width: 100%;
   height: auto;
   transition: transform 0.3s ease;
 }
@@ -159,10 +165,11 @@
 }
 
 .intro-figure__caption {
+  max-width: 420px;
+  margin: 0 auto;
   background: color-mix(in srgb, var(--surface-color) 95%, var(--accent-color) 5%);
-  color: var(--default-color);
+  color: color-mix(in srgb, var(--default-color) 85%, var(--contrast-color) 15%);
   font-size: 0.9rem;
-  margin: 0;
 }
 
 /* Testimonials Section */
