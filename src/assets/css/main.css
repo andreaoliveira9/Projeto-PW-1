@@ -150,6 +150,21 @@
   }
 }
 
+/* Dark mode styling for .bg-light elements */
+:root:has(#theme-dark:checked) .bg-light,
+:root[data-theme="dark"] .bg-light {
+  background-color: var(--surface-color) !important;
+  color: var(--default-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:has(#theme-auto:checked) .bg-light,
+  :root[data-theme="auto"] .bg-light {
+    background-color: var(--surface-color) !important;
+    color: var(--default-color);
+  }
+}
+
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
