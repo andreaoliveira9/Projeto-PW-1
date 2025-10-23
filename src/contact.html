@@ -282,8 +282,12 @@
             </div>
 
             <div class="col-lg-7">
-              <input type="checkbox" id="modal-toggle" style="display: none" />
-              <form data-aos="fade-up" data-aos-delay="200">
+              <form
+                id="contact-form"
+                action="#success-modal"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 <div class="row gy-4">
                   <div class="col-md-6">
                     <label for="name-field" class="pb-2">Nome</label>
@@ -331,13 +335,9 @@
                   </div>
 
                   <div class="col-md-12 text-center">
-                    <label
-                      for="modal-toggle"
-                      class="btn btn-accent px-4"
-                      style="cursor: pointer"
-                    >
+                    <button type="submit" class="btn btn-accent px-4">
                       Enviar mensagem
-                    </label>
+                    </button>
                     <button type="reset" class="btn btn-secondary px-4">
                       Limpar formulário
                     </button>
@@ -395,12 +395,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">Mensagem Enviada com Sucesso!</h5>
-            <label
-              for="modal-toggle"
-              class="btn-close"
-              aria-label="Close"
-              style="cursor: pointer"
-            ></label>
+            <a href="contact.html" class="btn-close" aria-label="Close"></a>
           </div>
           <div class="modal-body">
             <p>
@@ -409,12 +404,7 @@
             </p>
           </div>
           <div class="modal-footer">
-            <label
-              class="btn btn-primary"
-              for="modal-toggle"
-              style="cursor: pointer"
-              >Fechar</label
-            >
+            <a href="contact.html" class="btn btn-primary">Fechar</a>
           </div>
         </div>
       </div>
