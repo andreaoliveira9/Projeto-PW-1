@@ -282,12 +282,8 @@
             </div>
 
             <div class="col-lg-7">
-              <form
-                action="#"
-                method="post"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
+              <input type="checkbox" id="modal-toggle" style="display: none" />
+              <form data-aos="fade-up" data-aos-delay="200">
                 <div class="row gy-4">
                   <div class="col-md-6">
                     <label for="name-field" class="pb-2">Nome</label>
@@ -335,9 +331,13 @@
                   </div>
 
                   <div class="col-md-12 text-center">
-                    <button type="submit" class="btn btn-accent px-4">
+                    <label
+                      for="modal-toggle"
+                      class="btn btn-accent px-4"
+                      style="cursor: pointer"
+                    >
                       Enviar mensagem
-                    </button>
+                    </label>
                     <button type="reset" class="btn btn-secondary px-4">
                       Limpar formulário
                     </button>
@@ -388,6 +388,37 @@
 
     <!-- Preloader -->
     <div id="preloader"></div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Mensagem Enviada com Sucesso!</h5>
+            <label
+              for="modal-toggle"
+              class="btn-close"
+              aria-label="Close"
+              style="cursor: pointer"
+            ></label>
+          </div>
+          <div class="modal-body">
+            <p>
+              A sua mensagem foi enviada com sucesso. Entraremos em contacto em
+              breve.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <label
+              class="btn btn-primary"
+              for="modal-toggle"
+              style="cursor: pointer"
+              >Fechar</label
+            >
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="assets/js/theme.js" defer></script>
 
