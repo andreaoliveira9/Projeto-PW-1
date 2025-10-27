@@ -313,13 +313,20 @@
 
                   <div class="col-md-12">
                     <label for="subject-field" class="pb-2">Assunto</label>
-                    <input
-                      type="text"
-                      class="form-control"
+                    <select
+                      class="form-select"
                       name="subject"
                       id="subject-field"
                       required=""
-                    />
+                    >
+                      <option value="" disabled selected>
+                        Seleciona o motivo do contacto
+                      </option>
+                      <option value="suporte">Suporte técnico</option>
+                      <option value="conteudo">Conteúdos e recursos</option>
+                      <option value="parcerias">Parcerias</option>
+                      <option value="outros">Outros</option>
+                    </select>
                   </div>
 
                   <div class="col-md-12">
